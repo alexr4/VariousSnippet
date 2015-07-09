@@ -1,0 +1,17 @@
+[
+  {
+    "id": 0,
+    "name": "Capra hircus",
+    "floatelement": 0.10000000149011612
+  },
+  {
+    "id": 1,
+    "name": "Panthera pardus",
+    "floatelement": 2.5
+  },
+  {
+    "id": 2,
+    "name": "Equus zebra",
+    "floatelement": 3.5
+  }
+]
