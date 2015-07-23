@@ -12,6 +12,18 @@ public class Midi {
     midi = new MidiBus(app, -1, 1);
   }
 
+  void sentNote(int channel, int note, int velocity)
+  {
+    midi.sendNoteOn(channel, note, velocity);
+  }
+
+  void sendControllerChange(int bus, int channel, int value)
+  {
+    midi.sendControllerChange(bus, channel, value);
+  } 
+
+  //passage methode
+  /*
   void startScanner() {
     midi.sendNoteOn(0, 36, 127);
   }
@@ -35,5 +47,6 @@ public class Midi {
       particlesFallStarted = true;
     }
   }
+  */
 }
 

@@ -14,12 +14,12 @@ void setup()
 
 void draw()
 {
-  int channel = 0; 
-  int number = 14; 
+  int bus = 0; 
+  int channel = 14; 
   int value = round(lerp(minValue, maxValue, offset));
 
 
-  midiObj.silhouetteControlChange(channel, number, value);
+  midiObj.sendControllerChange(bus, channel, value);
 
 
   udpateDirection();
