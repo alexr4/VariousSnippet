@@ -64,9 +64,9 @@ void initSphere()
       beta = map(j, 0, rows-1, 0, TWO_PI);
       //radius = random(100, 110);
 
-      x = sin(alpha)*cos(beta)*radius;
-      y = sin(alpha)*sin(beta)*radius;
-      z = cos(alpha)*radius;
+      x = sin(alpha) * cos(beta) * radius;
+      y = sin(alpha) * sin(beta) * radius;
+      z = cos(alpha) * radius;
 
       vertice[i][j] = new PVector(x, y, z);
     }

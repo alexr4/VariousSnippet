@@ -34,7 +34,7 @@ void draw()
   drawAxis(10, new PVector(startLoc.x + startWidth/2, startLoc.y + startHeight/2), "RVB");
   noStroke();
   fill(0, 255, 0);
-  ellipse(loc.x, loc.y, 20, 20);
+  ellipse(loc.x, loc.y, 25, 25);
 
   //zone 2
   pushMatrix();

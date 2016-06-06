@@ -284,7 +284,7 @@ class Kinect
 
           skeletonList.set(j, new PVector(jointX, jointY, jointZ));
         }
-        
+
         for (int j=0; j<skeletonStateList.size(); j++)
         {
           skeletonStateList.set(j, joints[j].getState());
@@ -310,7 +310,7 @@ class Kinect
 
           skeletonList.set(j, new PVector(jointX, jointY, jointZ));
         }
-        
+
         for (int j=0; j<skeletonStateList.size(); j++)
         {
           skeletonStateList.set(j, joints[j].getState());
@@ -336,7 +336,7 @@ class Kinect
 
           skeletonList.set(j, new PVector(jointX, jointY, jointZ));
         }
-        
+
         for (int j=0; j<skeletonStateList.size(); j++)
         {
           skeletonStateList.set(j, joints[j].getState());
@@ -396,7 +396,7 @@ class Kinect
       }
     }
   }
-  
+
   public void compute3DNormalizeSkeleton()
   {
     ArrayList<KSkeleton> skeletonArray =  kinect.getSkeleton3d();
@@ -491,7 +491,7 @@ class Kinect
         PVector vert1 = depth3DCoord[ii01][ij00];
         PVector vert2 = depth3DCoord[ii00][ij01];
         PVector vert3 = depth3DCoord[ii01][ij01];
-        
+
         //check if off limit
         if (vert0.z < near_0.z && vert1.z < near_1.z && vert2.z < near_2.z && vert3.z < near_3.z)
         {
@@ -1182,6 +1182,17 @@ class Kinect
   public PVector[][] getColor2DCoord()
   {
     return color2DCoord;
+  }
+
+  public PVector[] getNearPlane()
+  {
+    PVector[] nearPlane = {
+      near_0.copy(), 
+      near_1.copy(), 
+      near_2.copy(), 
+      near_3.copy()
+    };
+    return nearPlane;
   }
 }
 

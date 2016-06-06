@@ -31,15 +31,17 @@ void draw()
   //LightAxis
   distance00 = 100;
   distance01 = 100;
-  PVector axisKey = compute3DRotationVector(camPosition.get(), radians(60), 'y'); 
-   PVector axisFill = compute3DRotationVector(camPosition.get(), radians(-30), 'y');
+  // PVector axisKey = compute3DRotationVector(camPosition.get(), radians(60), 'y'); 
+  //PVector axisFill = compute3DRotationVector(camPosition.get(), radians(-30), 'y');
+  PVector axisKey = computeRodrigueRotation(new PVector(0, 1, 0), new PVector(0, 0, 1), radians(60)); 
+  PVector axisFill = computeRodrigueRotation(new PVector(0, 1, 0), new PVector(0, 0, 1), radians(-30));
   PVector dak =axisKey.get();
   PVector daf = axisFill.get();
   dak.mult(distance00);
   daf.mult(distance01);
-  
+
   //debugLine
-  
+
   stroke(255, 0, 255);
   line(0, 0, 0, dak.x, dak.y, dak.z);
   stroke(255, 255, 0);
@@ -54,7 +56,7 @@ void draw()
   line(0, 0, 0, keyLight.x, keyLight.y, keyLight.z);
   stroke(255, 255, 0);
   line(0, 0, 0, fillLight.x, fillLight.y, fillLight.z);
-  
+
   fill(0);
   noStroke();
   text("Key light", keyLight.x, keyLight.y, keyLight.z);
